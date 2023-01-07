@@ -8,6 +8,14 @@
     <title>DsK-David</title>
 </head>
 <body>
+    <div class="modal">
+        <div class="modal-content">
+         <p class="bio_text">Hello <br> welcome to my portfolio explore every part of <br> this site I hope it satisfies your desire.
+      <br>      Good adventure Dev</p>
+        </div>
+       <a class="close-button">&times;</a>
+      </div>
+
     <div class="nav_bar">
         <ul>
             <li><a class="checked" href="/" translate="no">Sobre Mim</a></li>
@@ -43,6 +51,51 @@
     font-family: monospace;
     color: #fff;
 }
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color:rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    word-wrap: break-word;
+    word-break: break-all;
+}
+  
+.modal-content {
+    color: aliceblue;
+    background:#2A2A49;
+    padding: 20px;
+    border-radius: 10px;
+    height: 300px;
+    font-size: 10pt;
+    width:400px;
+    word-wrap: break-word;
+}
+.bio_text{
+    overflow: hidden; /* Esconde o conteúdo que ultrapassa o tamanho do elemento */
+    white-space: nowrap;
+    font-size: 15pt;
+    animation: typing 3s steps(60, end);
+}
+  @keyframes typing {
+    from { width: 0; }
+    to { 
+        width: 100%;
+     }
+}
+  
+  .close-button{
+    padding:8px;
+    color: aliceblue;
+    font-size: 15pt;
+    font-weight: 900;
+    cursor: pointer;
+  }
+
 .name_title h3{
     color: #B9D4A0;
     text-transform: uppercase;
