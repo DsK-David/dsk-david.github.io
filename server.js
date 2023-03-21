@@ -8,13 +8,13 @@ const server = require('http').createServer(app)
 app.get('/',(req,res) => {
     res.sendFile(__dirname + '/index.html')
 })
-app.get('/DsK-David/about',(req,res) => {
+app.get('/about',(req,res) => {
     res.sendFile(__dirname + '/index.html')
 })
-app.get('/DsK-David/projetos',(req,res) => {
+app.get('/projetos',(req,res) => {
     res.sendFile(__dirname + '/projetos.html')
 })
-app.get('/DsK-David/skills',(req,res) => {
+app.get('/skills',(req,res) => {
     res.sendFile(__dirname + '/skills.html')
 })
 app.get('/DsK-David/api/projects/',(req,res) => {
