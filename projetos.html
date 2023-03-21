@@ -457,7 +457,7 @@ theme.addEventListener("click", () => {
 
 function GetProjects(){
   const container = document.querySelector('.projects_container')
-  fetch('http://localhost:3000/api')
+  fetch('http://dsk-david.github.io/api')
   .then(response => response.json())
   .then(data => {
       data.map((item)=>{
