@@ -383,7 +383,7 @@ body{
         <a class="logo" href="#">DsK-David</a>
         <ul class="menu">
           <li><a href="/">Home</a></li>
-          <li><a href="/about">Sobre</a></li>
+          <li><a href="/">Sobre</a></li>
           <li><a href="/projetos">Projetos</a></li>
           <li><a href="/skills">Skills</a></li>
           <span class="theme"><i class="bx bx-moon"></i></span>
@@ -397,7 +397,7 @@ body{
       <div class="routes">
         <ul>
           <li><a href="/">Home</a></li>
-          <li><a href="/about">Sobre</a></li>
+          <li><a href="/">Sobre</a></li>
           <li><a href="/projetos">Projetos</a></li>
           <li><a href="/skills">Skills</a></li>
           <span><i class="bx bx-moon"></i></span>
@@ -457,7 +457,7 @@ theme.addEventListener("click", () => {
 
 function GetProjects(){
   const container = document.querySelector('.projects_container')
-  fetch('http://localhost:3000/DsK-David/api/projects')
+  fetch('http://localhost:3000/api')
   .then(response => response.json())
   .then(data => {
       data.map((item)=>{
