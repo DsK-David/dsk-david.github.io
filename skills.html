@@ -1,0 +1,563 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" href="/style.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Skills</title>
+    <style>
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    font-family: sans-serif;
+
+}
+.switch{
+    background: #29354B;
+    color: #fff;
+    
+}
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #29354B;
+    color: #fff;
+    padding: 15px;
+  }
+  
+  .logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-decoration: none;
+    color: #fff;
+    font-family: monospace;
+  }
+  
+  .menu {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .menu li {
+    margin-right: 20px;
+  }
+  
+  .menu li:last-child {
+    margin-right: 0;
+  }
+  
+  .menu a {
+    color: #fff;
+    text-decoration: none;
+  }
+  .menu a:hover{
+    color: #19BD9B; 
+  }
+  .menu:hover a:not(:hover){
+    filter: blur(1px);
+    opacity: 0.5;
+  }
+  
+  .toggle {
+    font-size: 2rem;
+    cursor: pointer;
+    display: none;
+  }
+  
+  .routes {
+    display: none;
+    background-color: #29354B;
+    color: #fff;
+    padding: 10px;
+  }
+  
+  .routes ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .routes li {
+    margin-bottom: 10px;
+  }
+  
+  .routes a {
+    color: #fff;
+    text-decoration: none;
+  }
+  .routes a:hover{
+    color: #19BD9B; 
+  }
+  .routes:hover a:not(:hover){
+    filter: blur(1px);
+    opacity: 0.5;
+  }
+  
+  @media(max-width: 768px) {
+    .menu {
+      display: none;
+      position: absolute;
+      top: 70px;
+      left: 0;
+      width: 100%;
+      background-color: #333;
+      z-index: 1;
+      opacity: 0;
+    }
+  
+    .menu li {
+      display: block;
+      margin-right: 0;
+      text-align: center;
+    }
+  
+    .toggle {
+      display: block;
+    }
+  
+    .routes {
+      display: block;
+      opacity: 0;
+    }
+    .container{
+      margin-top: 200px;
+   }
+  
+   
+    
+    .skills_container{
+      margin: 0;
+      padding: 0;
+    }
+  }
+ 
+
+  
+
+
+  .container{
+    position: relative;
+    display: flex;
+    width: 100%;
+    height: 100%;
+
+    
+  }
+  .bio_content{
+    max-width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-left: 60px;
+
+  }
+  .bio_content h2{
+    font-size: 5em;
+    font-weight: 600;
+    color:#111;
+    z-index:1111;
+    position:relative;
+  }
+  .bio_content h2 span{
+    color: #B71B1C;
+    font-weight: 900;
+
+  }
+  .bio_content h3{
+    font-size: 3em;
+    font-weight: 400;
+    color: #333;
+    margin: 10px 0;
+  }
+  .bio_content p{
+    font-size: 22px;
+    font-weight: 500;
+    color: #333;
+    margin: 10px 0;
+  }
+  .bio_content .btn{
+    width: 100%;
+    margin-top: 20px;
+  
+}
+.btn button{
+    border: none;
+    background:#29354B;
+    color: #fff;
+    font-size: 25px;
+    text-transform: capitalize;
+    letter-spacing: 2px;
+    padding: 10px 30px;
+    box-shadow: 0 15px 20px 0 rgba(0, 0 , 0, 0.3);
+    margin-top: 20px;
+    cursor: pointer;
+}
+.btn button:hover{
+    transition: 0.3s ease;
+    padding: 10px 40px;
+
+}
+.Social_links{
+    position:bottom;
+    bottom:90px;
+}
+.Social_links i{
+    margin: 0 20px;
+    font-size: 2em;
+    cursor: pointer;
+    margin-top: 10px;
+    color: #333;
+    transition: 0.2s ease;
+
+}
+.Social_links i:hover{
+      font-size: 2.4em;
+    color: #B71B1C;
+    
+
+}
+.switch .bx-sun{
+    display: block;
+}
+.projects_container{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  width: 100%;
+  text-align: center;
+  justify-content: center;
+  justify-items: center;
+  margin-top: 20px;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  border-radius: 0.75rem;
+  background-color: rgb(194, 191, 191);
+  width: 300px;
+  height: 370px;
+  box-shadow: 0 4px 6px -1px rgba(0,0,0,.1),
+  0 2px 4px -2px rgba(0,0,0,.1);
+  margin: 10px;
+}
+.card a{
+  color: #333;
+}
+
+.header {
+  position: relative;
+  background-clip: border-box;
+  margin-top: 1.5rem;
+  margin-left: 1rem;
+  margin-right: 1rem;
+  border-radius: 0.75rem;
+  background-color: #29354B;
+  box-shadow: 0 10px 15px -3px #29354B,0 4px 6px -4px rgba(33,150,243,.4);
+  height: 14rem;
+}
+
+.info {
+  border: none;
+  padding: 1.5rem;
+  text-align: center;
+}
+
+.title {
+  color: rgb(38 50 56);
+  letter-spacing: 0;
+  line-height: 1.375;
+  font-weight: 600;
+  font-size: 1.25rem;
+  margin-bottom: 0.5rem;
+}
+
+.footer {
+  padding: 0.75rem;
+  border: 1px solid rgb(236 239 241);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: rgba(0, 140, 255, 0.082);
+  border-radius: 0.75em;
+}
+
+.tag {
+  font-weight: 300;
+  font-size: .75rem;
+  display: block;
+}
+
+.action {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  user-select: none;
+  border: none;
+  outline: none;
+  box-shadow: 0 4px 6px -1px rgba(33,150,243,.4),0 2px 4px -2px rgba(33,150,243,.4);
+  color: rgb(255 255 255);
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: .75rem;
+  padding: 0.75rem 1.5rem;
+  background-color: #1EBD9B;
+  border-radius: 0.5rem;
+}
+.action:hover{
+  opacity: 0.7;
+}
+.action a{
+  color: #fff;
+  text-decoration: none;
+
+}
+.skills_container{
+  display: flex;
+  justify-content: center;
+  justify-items: center;
+  margin-top: 16px;
+}
+.skills_card {
+  margin-top: 10px;
+  width: 300px;
+  background-color: #b4aeae;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.header {
+  background-color: #333;
+  height: auto;
+  color: #fff;
+  padding: 20px;
+  text-align: center;
+  font-size: 18px;
+}
+
+.body {
+  padding: 20px;
+}
+
+.skill {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.skill-name {
+  width: 120px;
+  font-size: 16px;
+}
+
+.skill-level {
+  width: 160px;
+  height: 10px;
+  background-color: #eee;
+  border-radius: 10px;
+  overflow: hidden;
+  margin-left: 20px;
+}
+
+.skill-percent {
+  background-color: #333;
+  height: 100%;
+}
+
+.skill-percent-number {
+  margin-left: 20px;
+  font-size: 16px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <a class="logo" href="#">DsK-David</a>
+        <ul class="menu">
+          <li><a href="/">Home</a></li>
+          <li><a href="/DsK-David/about">Sobre</a></li>
+          <li><a href="/DsK-David/projetos">Projetos</a></li>
+          <li><a href="/DsK-David/skills">Skills</a></li>
+          <span class="theme"><i class="bx bx-moon"></i></span>
+          
+        </ul>
+        <div class="toggle">
+            <i class='bx bx-menu'></i>
+        </div>
+      </nav>
+      
+      <div class="routes">
+        <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="/DsK-David/about">Sobre</a></li>
+            <li><a href="/DsK-David/projetos">Projetos</a></li>
+            <li><a href="/DsK-David/skills">Skills</a></li>
+            <span class="theme"><i class="bx bx-moon"></i></span>
+        </ul>
+      </div>
+      <div class="skills_container">
+        <div class="skills_card">
+            <div class="header">My Skills</div>
+            <div class="body">
+              <div class="skill">
+                <div class="skill-name">HTML</div>
+                <div class="skill-level">
+                  <div class="skill-percent" style="width: 90%"></div>
+                </div>
+                <div class="skill-percent-number">90%</div>
+              </div>
+              <div class="skill">
+                <div class="skill-name">CSS</div>
+                <div class="skill-level">
+                  <div class="skill-percent" style="width: 75%"></div>
+                </div>
+                <div class="skill-percent-number">75%</div>
+              </div>
+              <div class="skill">
+                <div class="skill-name">JavaScript</div>
+                <div class="skill-level">
+                  <div class="skill-percent" style="width: 95%"></div>
+                </div>
+                <div class="skill-percent-number">95%</div>
+              </div>
+              <div class="skill">
+                <div class="skill-name">Python</div>
+                <div class="skill-level">
+                  <div class="skill-percent" style="width: 50%"></div>
+                </div>
+                <div class="skill-percent-number">50%</div>
+              </div>
+              <div class="skill">
+                <div class="skill-name">PHP</div>
+                <div class="skill-level">
+                  <div class="skill-percent" style="width: 55%"></div>
+                </div>
+                <div class="skill-percent-number">55%</div>
+              </div>
+              <div class="skill">
+                <div class="skill-name">ReactJS</div>
+                <div class="skill-level">
+                  <div class="skill-percent" style="width: 20%"></div>
+                </div>
+                <div class="skill-percent-number">20%</div>
+              </div>
+              <div class="skill">
+                <div class="skill-name">C</div>
+                <div class="skill-level">
+                  <div class="skill-percent" style="width: 40%"></div>
+                </div>
+                <div class="skill-percent-number">40%</div>
+              </div>
+              <div class="skill">
+                <div class="skill-name">C++</div>
+                <div class="skill-level">
+                  <div class="skill-percent" style="width: 40%"></div>
+                </div>
+                <div class="skill-percent-number">40%</div>
+              </div>
+            </div>
+          </div>
+          
+
+      </div>
+</body>
+<script>
+  const toggle = document.querySelector(".toggle");
+const routes = document.querySelector(".routes");
+const theme = document.querySelector('.theme')
+const body = document.querySelector('.body')
+
+toggle.addEventListener("click", () => {
+    routes.style.opacity='1'
+  if (routes.classList.contains("routes-visible")) {
+    routes.classList.remove("routes-visible");
+    toggle.innerHTML = '<i class="bx bx-menu"></i>';
+    routes.style.opacity='0'
+  } else {
+    routes.classList.add("routes-visible");
+    toggle.innerHTML = '<i class="bx bx-x"></i>';
+  }
+});
+
+
+
+theme.addEventListener("click", () => {
+    const theme = document.querySelector('.theme')
+    const title= document.querySelector('h2')
+    const text = document.querySelector('p')
+    const subtitle = document.querySelector('h3')
+    const div = document.getElementById('i')
+
+    document.body.classList.toggle('switch')
+    if (document.body.classList.contains('switch')) {
+        // Código a ser executado se a classe 'switch' estiver presente no elemento 'body'
+        theme.innerHTML = '<i class="bx bx-sun"></i>';
+        title.style.color='#fff'
+        text.style.color='#fff'
+        subtitle.style.color='#fff'
+        div.style.backgroundColor='#fff'
+        div.style.width='auto'
+        div.style.borderRadius='10px'
+
+    }
+    else{
+        theme.innerHTML = '<i class="bx bx-moon"></i>'; 
+        title.style.color='#111'
+        subtitle.style.color='#333' 
+        text.style.color='#333' 
+    }
+
+});
+
+function GetProjects(){
+  const container = document.querySelector('.projects_container')
+  fetch('http://localhost:3000/DsK-David/api/projects')
+  .then(response => response.json())
+  .then(data => {
+      data.map((item)=>{
+          const div = document.createElement('div')
+          for(project_name in data){
+              output = `
+              <div class="card">
+<div class="header"></div>
+<div class="info">
+<p class="title">`+item.project_name+`</p>
+<p>`+item.project_bio+`</p>
+</div>
+<div class="footer">
+<p class="tag"><a href='`+item.project_repo+`'>Repositorio</a></p>
+<button type="button" class="action"><a href='`+item.project_url+`'>`+item.project_name+`</a></button>
+</div>
+</div>
+              `
+              div.innerHTML = output
+              container.appendChild(div)
+
+
+          }
+      })
+  })
+}
+</script>
+</html>
