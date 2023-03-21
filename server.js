@@ -17,7 +17,7 @@ app.get('/projetos',(req,res) => {
 app.get('/skills',(req,res) => {
     res.sendFile(__dirname + '/skills.html')
 })
-app.get('/DsK-David/api/projects/',(req,res) => {
+app.get('/api',(req,res) => {
     res.json([
         {
             project_name:'GitUSers',
