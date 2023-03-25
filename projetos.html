@@ -313,6 +313,34 @@ theme.addEventListener("click", () => {
 
 });
 
+function GetProjects(){
+  const container = document.querySelector('.projects_container')
+  fetch('https://dsk-david.github.io/projetosjson/projetos.json')
+  .then(response => response.json())
+  .then(data => {
+      data.map((item)=>{
+          const div = document.createElement('div')
+          for(project_name in data){
+              output = `
+              <div class="card">
+<div class="header"></div>
+<div class="info">
+<p class="title">`+item.project_name+`</p>
+<p>`+item.project_bio+`</p>
+</div>
+<div class="footer">
+<p class="tag"><a href='`+item.project_repo+`'>Repositorio</a></p>
+<button type="button" class="action"><a href='`+item.project_url+`'>`+item.project_name+`</a></button>
+</div>
+</div>
+              `
+              div.innerHTML = output
+              container.appendChild(div)
 
+
+          }
+      })
+  })
+}
 </script>
 </html>
