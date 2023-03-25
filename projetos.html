@@ -129,10 +129,16 @@ body{
     .container{
       margin-top: 200px;
    }
-      .projects_container{
-          display:flex;
-          overflow-x:auto;
-      }
+   .projects_container{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  width: 100%;
+  text-align: center;
+  justify-content: center;
+  justify-items: center;
+  margin-top: 20px;
+	margin-left:50px;
+}
       
       .card{
            display: flex;
@@ -245,8 +251,7 @@ body{
     display: block;
 }
 .projects_container{
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+ display: flex;
   width: 100%;
   text-align: center;
   justify-content: center;

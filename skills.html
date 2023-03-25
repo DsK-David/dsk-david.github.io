@@ -413,7 +413,7 @@ body{
             <li><a href="/about">Sobre</a></li>
             <li><a href="/projetos">Projetos</a></li>
             <li><a href="/skills">Skills</a></li>
-            <span class="theme"><i class="bx bx-moon"></i></span>
+            <span onclick="theme()" class="theme"><i class="bx bx-moon"></i></span>
         </ul>
       </div>
       <div class="skills_container">
@@ -483,6 +483,51 @@ body{
       </div>
 </body>
 <script>
+  function theme(){
+    const toggle = document.querySelector(".toggle");
+const routes = document.querySelector(".routes");
+const theme = document.querySelector('.theme')
+const body = document.querySelector('.body')
+
+toggle.addEventListener("click", () => {
+    routes.style.opacity='1'
+  if (routes.classList.contains("routes-visible")) {
+    routes.classList.remove("routes-visible");
+    toggle.innerHTML = '<i class="bx bx-menu"></i>';
+    routes.style.opacity='0'
+  } else {
+    routes.classList.add("routes-visible");
+    toggle.innerHTML = '<i class="bx bx-x"></i>';
+  }
+});
+
+
+
+theme.addEventListener("click", () => {
+    const theme = document.querySelector('.theme')
+    const title= document.querySelector('h2')
+    const text = document.querySelector('p')
+    const subtitle = document.querySelector('h3')
+    const div = document.getElementById('i')
+    const skill = document.querySelector('.skill')
+
+    document.body.classList.toggle('switch')
+    if (document.body.classList.contains('switch')) {
+        // Código a ser executado se a classe 'switch' estiver presente no elemento 'body'
+        theme.innerHTML = '<i class="bx bx-sun"></i>';
+        body.style.color='#111'
+        
+
+    }
+    else{
+        theme.innerHTML = '<i class="bx bx-moon"></i>'; 
+        title.style.color='#111'
+        subtitle.style.color='#333' 
+        text.style.color='#333' 
+    }
+
+});
+  }
   const toggle = document.querySelector(".toggle");
 const routes = document.querySelector(".routes");
 const theme = document.querySelector('.theme')
