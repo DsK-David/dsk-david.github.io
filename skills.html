@@ -421,21 +421,21 @@ body{
             <div class="header">My Skills</div>
             <div class="body">
               <div class="skill">
-                <div class="skill-name">HTML</div>
+                <div class="skill-name"> <i class='bx bxl-html5'></i>HTML</div>
                 <div class="skill-level">
                   <div class="skill-percent" style="width: 90%"></div>
                 </div>
                 <div class="skill-percent-number">90%</div>
               </div>
               <div class="skill">
-                <div class="skill-name">CSS</div>
+                <div class="skill-name"><i class='bx bxl-css3'></i>CSS</div>
                 <div class="skill-level">
                   <div class="skill-percent" style="width: 75%"></div>
                 </div>
                 <div class="skill-percent-number">75%</div>
               </div>
               <div class="skill">
-                <div class="skill-name">JavaScript</div>
+                <div class="skill-name"><i class='bx bxl-javascript'></i>JavaScript</div>
                 <div class="skill-level">
                   <div class="skill-percent" style="width: 95%"></div>
                 </div>
@@ -449,28 +449,28 @@ body{
                 <div class="skill-percent-number">50%</div>
               </div>
               <div class="skill">
-                <div class="skill-name">PHP</div>
+                <div class="skill-name"><i class='bx bxl-php'></i>PHP</div>
                 <div class="skill-level">
                   <div class="skill-percent" style="width: 55%"></div>
                 </div>
                 <div class="skill-percent-number">55%</div>
               </div>
               <div class="skill">
-                <div class="skill-name">ReactJS</div>
+                <div class="skill-name"><i class='bx bxl-react'></i>ReactJS</div>
                 <div class="skill-level">
                   <div class="skill-percent" style="width: 20%"></div>
                 </div>
                 <div class="skill-percent-number">20%</div>
               </div>
               <div class="skill">
-                <div class="skill-name">C</div>
+                <div class="skill-name"><i class='bx bxl-c'></i>C</div>
                 <div class="skill-level">
                   <div class="skill-percent" style="width: 40%"></div>
                 </div>
                 <div class="skill-percent-number">40%</div>
               </div>
               <div class="skill">
-                <div class="skill-name">C++</div>
+                <div class="skill-name" ><i class='bx bxl-c-plus-plus'></i>C++</div>
                 <div class="skill-level">
                   <div class="skill-percent" style="width: 40%"></div>
                 </div>
@@ -508,6 +508,7 @@ theme.addEventListener("click", () => {
     const text = document.querySelector('p')
     const subtitle = document.querySelector('h3')
     const div = document.getElementById('i')
+    const skill = document.querySelector('.skill')
 
     document.body.classList.toggle('switch')
     if (document.body.classList.contains('switch')) {
@@ -519,6 +520,7 @@ theme.addEventListener("click", () => {
         div.style.backgroundColor='#fff'
         div.style.width='auto'
         div.style.borderRadius='10px'
+        skill.style.color='#111'
 
     }
     else{
