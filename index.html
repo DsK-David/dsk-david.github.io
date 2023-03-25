@@ -396,9 +396,9 @@ body{
       
       <div class="routes">
         <ul>
-          <li><a href="/">Home</a></li>
-          <li><a href="/">Sobre</a></li>
-          <li><a href="/projetos">Projetos</a></li>
+          <li> <i class="bx bxl-home"></i><a href="/">Home</a></li>
+          <li> <i class="bx bxl-about"i><a href="/">Sobre</a></li>
+          <li> <i class="bx bxl-projects"></i><a href="/projetos">Projetos</a></li>
           <li><a href="/skills">Skills</a></li>
           <span class="theme"><i class="bx bx-moon"></i></span>
         </ul>
@@ -411,12 +411,12 @@ body{
           lançados,eu gosto de trabalhar em equipe ter uma comunicação, e eu sei que vou alcançar meus objetivos que é ser um grande dev e ter minha empresa
       </p>
       <div class="Social_links" id="i">
-        <i class="bx bxl-github"></i>
-        <i class="bx bxl-instagram"></i>
-        <i class="bx bxl-facebook"></i>
+        <i class="bx bxl-github"><a href="https://github.com/DsK-David"></a></i>
+        <i class="bx bxl-instagram"> <a href="https://instagram.com/n0_0ne__dsk"></a></i>
+        <i class="bx bxl-facebook"><a href="https://www.facebook.com/profile.php?id=100022168362806"></a></i>
       </div>
       <div class="btn">
-        <button>Get Started</button>
+        <button onclick="start()">Get Started</button>
       </div>
     </div>
 
@@ -424,6 +424,10 @@ body{
 </div>
 </body>
 <script>
+  function start(){
+    location.href='/projetos'
+  }
+
 const toggle = document.querySelector(".toggle");
 const routes = document.querySelector(".routes");
 const theme = document.querySelector('.theme')
