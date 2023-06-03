@@ -7,152 +7,159 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Projetos</title>
     <style>
-      *{
-    margin: 0;
-    padding: 0;
+     *{
+  margin: 0;
+  padding: 0;
 }
+
 body{
-    font-family: sans-serif;
-
+  font-family: sans-serif;
 }
+
 .switch{
-    background: #29354B;
-    color: #fff;
-    
+  background: #29354B;
+  color: #fff;
 }
+
 .navbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color: #29354B;
-    color: #fff;
-    padding: 15px;
-  }
-  
-  .logo {
-    font-size: 1.5rem;
-    font-weight: bold;
-    text-decoration: none;
-    color: #fff;
-    font-family: monospace;
-  }
-  
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #29354B;
+  color: #fff;
+  padding: 15px;
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+  text-decoration: none;
+  color: #fff;
+  font-family: monospace;
+}
+
+.menu {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.menu li {
+  margin-right: 20px;
+}
+
+.menu li:last-child {
+  margin-right: 0;
+}
+
+.menu a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.menu a:hover{
+  color: #19BD9B; 
+}
+
+.menu:hover a:not(:hover){
+  filter: blur(1px);
+  opacity: 0.5;
+}
+
+.toggle {
+  font-size: 2rem;
+  cursor: pointer;
+  display: none;
+}
+
+.routes {
+  display: none;
+  background-color: #29354B;
+  color: #fff;
+  padding: 10px;
+}
+
+.routes ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.routes li {
+  margin-bottom: 10px;
+}
+
+.routes a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.routes a:hover{
+  color: #19BD9B; 
+}
+
+.routes:hover a:not(:hover){
+  filter: blur(1px);
+  opacity: 0.5;
+}
+
+@media (max-width: 768px) {
   .menu {
-    display: flex;
-    list-style: none;
-    margin: 0;
-    padding: 0;
+    display: none;
+    position: absolute;
+    top: 70px;
+    left: 0;
+    width: 100%;
+    background-color: #333;
+    z-index: 1;
+    opacity: 0;
   }
-  
+
   .menu li {
-    margin-right: 20px;
-  }
-  
-  .menu li:last-child {
-    margin-right: 0;
-  }
-  
-  .menu a {
-    color: #fff;
-    text-decoration: none;
-  }
-  .menu a:hover{
-    color: #19BD9B; 
-  }
-  .menu:hover a:not(:hover){
-    filter: blur(1px);
-    opacity: 0.5;
-  }
-  
-  .toggle {
-    font-size: 2rem;
-    cursor: pointer;
-    display: none;
-  }
-  
-  .routes {
-    display: none;
-    background-color: #29354B;
-    color: #fff;
-    padding: 10px;
-  }
-  
-  .routes ul {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-  }
-  
-  .routes li {
-    margin-bottom: 10px;
-  }
-  
-  .routes a {
-    color: #fff;
-    text-decoration: none;
-  }
-  .routes a:hover{
-    color: #19BD9B; 
-  }
-  .routes:hover a:not(:hover){
-    filter: blur(1px);
-    opacity: 0.5;
-  }
-  
-  @media(max-width: 768px) {
-    .menu {
-      display: none;
-      position: absolute;
-      top: 70px;
-      left: 0;
-      width: 100%;
-      background-color: #333;
-      z-index: 1;
-      opacity: 0;
-    }
-  
-    .menu li {
-      display: block;
-      margin-right: 0;
-      text-align: center;
-    }
-  
-    .toggle {
-      display: block;
-    }
-  
-    .routes {
-      display: block;
-      opacity: 0;
-    }
-    .container{
-      margin-top: 200px;
-        margin-left:150px;
-   }
-      .projects_container{
-      text-align: center;
-       flex-wrap: wrap;
-       display: grid;
-       grid-template-columns: 1fr 1fr;
-
-
-    }
-  }
-.switch .bx-sun{
     display: block;
+    margin-right: 0;
+    text-align: center;
+  }
+
+  .toggle {
+    display: block;
+  }
+
+  .routes {
+    display: block;
+    opacity: 0;
+  }
+
+  .container{
+    margin-top: 200px;
+    margin-left: 150px;
+  }
+
+  .projects_container{
+    text-align: center;
+    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin-left: 55px;
+  }
+}
+
+.switch .bx-sun{
+  display: block;
 }
 
 .projects_container{
-     margin: 0px;
-    padding: 0px;
-    width: 100%;
-    height: auto;
-    display: flex;
-    flex-wrap: wrap;
-    margin-top: 50px;
-    margin-left:55px;
-
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 50px;
+  margin-left: 55px;
 }
+
 .card {
   display: flex;
   flex-direction: column;
@@ -161,10 +168,10 @@ body{
   background-color: rgb(194, 191, 191);
   width: 300px;
   height: 370px;
-  box-shadow: 0 4px 6px -1px rgba(0,0,0,.1),
-  0 2px 4px -2px rgba(0,0,0,.1);
+  box-shadow: 0 4px 6px -1px rgba(0,0,0,.1), 0 2px 4px -2px rgba(0,0,0,.1);
   margin: 10px;
 }
+
 .card a{
   color: #333;
 }
@@ -227,14 +234,16 @@ body{
   background-color: #1EBD9B;
   border-radius: 0.5rem;
 }
+
 .action:hover{
   opacity: 0.7;
 }
+
 .action a{
   color: #fff;
   text-decoration: none;
-
 }
+
 
     </style>
 </head>
