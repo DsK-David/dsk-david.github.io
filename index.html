@@ -129,7 +129,9 @@ body{
     .container{
       margin-top: 200px;
    }
-  
+   .theme {
+                pointer-events: auto;
+            }
    
     
 
@@ -228,13 +230,13 @@ body{
 </head>
 <body>
     <nav class="navbar">
-        <a class="logo" href="#">DsK-David</a>
+        <a class="logo" href="/">DsK-David</a>
         <ul class="menu">
           <li><a href="/">Home</a></li>
           <li><a href="/">Sobre</a></li>
           <li><a href="/projetos">Projetos</a></li>
           <li><a href="/skills">Skills</a></li>
-          <span class="theme"><i class="bx bx-moon"></i></span>
+          <li class="theme"><i class="bx bx-moon"></i></li>
           
         </ul>
         <div class="toggle">
@@ -248,7 +250,7 @@ body{
           <li> <i class="bx bxl-about"i><a href="/">Sobre</a></li>
           <li> <i class="bx bxl-projects"></i><a href="/projetos">Projetos</a></li>
           <li><a href="/skills">Skills</a></li>
-          <span class="theme"><i class="bx bx-moon"></i></span>
+          <li class="theme"><i class="bx bx-moon"></i></li>
         </ul>
       </div>
 <div class="container">
@@ -264,7 +266,7 @@ body{
         <i class="bx bxl-facebook"><a href="https://www.facebook.com/profile.php?id=100022168362806"></a></i>
       </div>
       <div class="btn">
-        <button onclick="location.href="/projetos"">Get Started</button>
+        <button onclick='RedRect()'>Get Started</button>
       </div>
     </div>
 
@@ -272,7 +274,9 @@ body{
 </div>
 </body>
 <script>
-
+function RedRect(){
+  location.href='/projetos'
+}
 
 const toggle = document.querySelector(".toggle");
 const routes = document.querySelector(".routes");

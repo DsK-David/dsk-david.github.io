@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" href="/style.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Skills</title>
+    <style>
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    font-family: sans-serif;
+
+}
+.switch{
+    background: #29354B;
+    color: #fff;
+    
+}
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #29354B;
+    color: #fff;
+    padding: 15px;
+  }
+  
+  .logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-decoration: none;
+    color: #fff;
+    font-family: monospace;
+  }
+  
+  .menu {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .menu li {
+    margin-right: 20px;
+  }
+  
+  .menu li:last-child {
+    margin-right: 0;
+  }
+  
+  .menu a {
+    color: #fff;
+    text-decoration: none;
+  }
+  .menu a:hover{
+    color: #19BD9B; 
+  }
+  .menu:hover a:not(:hover){
+    filter: blur(1px);
+    opacity: 0.5;
+  }
+  
+  .toggle {
+    font-size: 2rem;
+    cursor: pointer;
+    display: none;
+  }
+  
+  .routes {
+    display: none;
+    background-color: #29354B;
+    color: #fff;
+    padding: 15px;
+  }
+  
+  .routes ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .routes li {
+    margin-bottom: 10px;
+  }
+  
+  .routes a {
+    color: #fff;
+    text-decoration: none;
+  }
+  .routes a:hover{
+    color: #19BD9B; 
+  }
+  .routes:hover a:not(:hover){
+    filter: blur(1px);
+    opacity: 0.5;
+  }
+  
+  @media(max-width: 768px) {
+    .menu {
+      display: none;
+      position: absolute;
+      top: 70px;
+      left: 0;
+      width: 100%;
+      background-color: #333;
+      z-index: 1;
+      opacity: 0;
+    }
+  
+    .menu li {
+      display: block;
+      margin-right: 0;
+      text-align: center;
+    }
+  
+    .toggle {
+      display: block;
+    }
+  
+    .routes {
+      display: block;
+      opacity: 0;
+    }
+    .container{
+      margin-top: 200px;
+   }
+  
+   
+    
+    .skills_container{
+      margin: 0;
+      padding: 0;
+    }
+  }
+
+.skills_container{
+  display: flex;
+  justify-content: center;
+  justify-items: center;
+  margin-top: 16px;
+}
+.skills_card {
+  margin-top: 10px;
+  width: 300px;
+  background-color: #b4aeae;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.header {
+  background-color: #333;
+  height: auto;
+  color: #fff;
+  padding: 20px;
+  text-align: center;
+  font-size: 18px;
+}
+
+.body {
+  padding: 20px;
+}
+
+.skill {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.skill-name {
+  width: 120px;
+  font-size: 16px;
+}
+
+.skill-level {
+  width: 160px;
+  height: 10px;
+  background-color: #eee;
+  border-radius: 10px;
+  overflow: hidden;
+  margin-left: 20px;
+}
+
+.skill-percent {
+  background-color: #333;
+  height: 100%;
+}
+
+.skill-percent-number {
+  margin-left: 20px;
+  font-size: 16px;
+}
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <a class="logo" href="#">DsK-David</a>
+        <ul class="menu">
+          <li><a href="/">Home</a></li>
+          <li><a href="/about">Sobre</a></li>
+          <li><a href="/projetos">Projetos</a></li>
+          <li><a href="/skills">Skills</a></li>
+          <span class="theme"><i class="bx bx-moon"></i></span>
+          
+        </ul>
+        <div class="toggle">
+            <i class='bx bx-menu'></i>
+        </div>
+      </nav>
+      
+      <div class="routes">
+        <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="/about">Sobre</a></li>
+            <li><a href="/projetos">Projetos</a></li>
+            <li><a href="/skills">Skills</a></li>
+            <span onclick="theme()" class="theme"><i class="bx bx-moon"></i></span>
+        </ul>
+      </div>
+      <div class="skills_container">
+        <div class="skills_card">
+            <div class="header">My Skills</div>
+            <div class="body">
+              <div class="skill">
+                <div class="skill-name"> <i class='bx bxl-html5'></i>HTML</div>
+                <div class="skill-level">
+                  <div class="skill-percent" style="width: 90%"></div>
+                </div>
+                <div class="skill-percent-number">90%</div>
+              </div>
+              <div class="skill">
+                <div class="skill-name"><i class='bx bxl-css3'></i>CSS</div>
+                <div class="skill-level">
+                  <div class="skill-percent" style="width: 75%"></div>
+                </div>
+                <div class="skill-percent-number">75%</div>
+              </div>
+              <div class="skill">
+                <div class="skill-name"><i class='bx bxl-javascript'></i> JavaScript</div>
+                <div class="skill-level">
+                  <div class="skill-percent" style="width: 95%"></div>
+                </div>
+                <div class="skill-percent-number">95%</div>
+              </div>
+              <div class="skill">
+                <div class="skill-name"> <i class='bx bxl-python'></i>Python</div>
+                <div class="skill-level">
+                  <div class="skill-percent" style="width: 50%"></div>
+                </div>
+                <div class="skill-percent-number">50%</div>
+              </div>
+              <div class="skill">
+                <div class="skill-name"><i class='bx bxl-php'></i>PHP</div>
+                <div class="skill-level">
+                  <div class="skill-percent" style="width: 55%"></div>
+                </div>
+                <div class="skill-percent-number">55%</div>
+              </div>
+              <div class="skill">
+                <div class="skill-name"><i class='bx bxl-react'></i>ReactJS</div>
+                <div class="skill-level">
+                  <div class="skill-percent" style="width: 20%"></div>
+                </div>
+                <div class="skill-percent-number">20%</div>
+              </div>
+              <div class="skill">
+                <div class="skill-name"><i class='bx bxl-c'></i>C</div>
+                <div class="skill-level">
+                  <div class="skill-percent" style="width: 40%"></div>
+                </div>
+                <div class="skill-percent-number">40%</div>
+              </div>
+              <div class="skill">
+                <div class="skill-name" ><i class='bx bxl-c-plus-plus'></i>C++</div>
+                <div class="skill-level">
+                  <div class="skill-percent" style="width: 40%"></div>
+                </div>
+                <div class="skill-percent-number">40%</div>
+              </div>
+            </div>
+          </div>
+          
+
+      </div>
+</body>
+<script>
+  function theme(){
+    const toggle = document.querySelector(".toggle");
+const routes = document.querySelector(".routes");
+const theme = document.querySelector('.theme')
+const body = document.querySelector('.body')
+
+toggle.addEventListener("click", () => {
+    routes.style.opacity='1'
+  if (routes.classList.contains("routes-visible")) {
+    routes.classList.remove("routes-visible");
+    toggle.innerHTML = '<i class="bx bx-menu"></i>';
+    routes.style.opacity='0'
+  } else {
+    routes.classList.add("routes-visible");
+    toggle.innerHTML = '<i class="bx bx-x"></i>';
+  }
+});
+
+
+
+theme.addEventListener("click", () => {
+    const theme = document.querySelector('.theme')
+    const title= document.querySelector('h2')
+    const text = document.querySelector('p')
+    const subtitle = document.querySelector('h3')
+    const div = document.getElementById('i')
+    const skill = document.querySelector('.skill')
+
+    document.body.classList.toggle('switch')
+    if (document.body.classList.contains('switch')) {
+        // Código a ser executado se a classe 'switch' estiver presente no elemento 'body'
+        theme.innerHTML = '<i class="bx bx-sun"></i>';
+        body.style.color='#111'
+        
+
+    }
+    else{
+        theme.innerHTML = '<i class="bx bx-moon"></i>'; 
+        title.style.color='#111'
+        subtitle.style.color='#333' 
+        text.style.color='#333' 
+    }
+
+});
+  }
+  const toggle = document.querySelector(".toggle");
+const routes = document.querySelector(".routes");
+const theme = document.querySelector('.theme')
+const body = document.querySelector('.body')
+
+toggle.addEventListener("click", () => {
+    routes.style.opacity='1'
+  if (routes.classList.contains("routes-visible")) {
+    routes.classList.remove("routes-visible");
+    toggle.innerHTML = '<i class="bx bx-menu"></i>';
+    routes.style.opacity='0'
+  } else {
+    routes.classList.add("routes-visible");
+    toggle.innerHTML = '<i class="bx bx-x"></i>';
+  }
+});
+
+
+
+theme.addEventListener("click", () => {
+    const theme = document.querySelector('.theme')
+    const title= document.querySelector('h2')
+    const text = document.querySelector('p')
+    const subtitle = document.querySelector('h3')
+    const div = document.getElementById('i')
+    const skill = document.querySelector('.skill')
+
+    document.body.classList.toggle('switch')
+    if (document.body.classList.contains('switch')) {
+        // Código a ser executado se a classe 'switch' estiver presente no elemento 'body'
+        theme.innerHTML = '<i class="bx bx-sun"></i>';
+        body.style.color='#111'
+        
+
+    }
+    else{
+        theme.innerHTML = '<i class="bx bx-moon"></i>'; 
+        title.style.color='#111'
+        subtitle.style.color='#333' 
+        text.style.color='#333' 
+    }
+
+});
+</script>
+</html>
