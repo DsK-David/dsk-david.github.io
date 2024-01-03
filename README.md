@@ -1,7 +1,5 @@
 <h1 align="center">Portifólio - David Silva 💻</h1>
 
-![Imagem do projeto finalizado](assets/images/projects/portifolio.png)
-
 <h4 align="center"><a href="https://dsk-david.github.io">Confira o projeto aqui</a></h4>
 
 ---
