@@ -14,14 +14,8 @@ const vidro = document.querySelector("#vidro");
 const loading = document.getElementById("loading");
 
 window.addEventListener("load", function () {
-  // Exibe o loading
-
-  // Adiciona um atraso de 2 segundos antes de chamar a função projetos()
-  setTimeout(function () {
-    projetos(projectsSection);
-    // Esconde o loading após a chamada da função projetos()
-    loading.style.display = "none";
-  }, 6000); // Ajuste o valor do atraso conforme necessário
+  loading.style.display = "none"; // Esconde o loading quando a página é totalmente carregada
+  projetos(projectsSection);
 });
 
 window.addEventListener("scroll", onScroll);
