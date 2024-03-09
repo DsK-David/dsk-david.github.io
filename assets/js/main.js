@@ -11,15 +11,17 @@ const notebook_2 = document.querySelector("#notebook-2");
 const notebook_2_white = document.querySelector("#notebook-2-white");
 const vidro = document.querySelector("#vidro");
 
-window.addEventListener("load", function begin() {
-  projetos(projectsSection);
-  const desafioBtn = document.querySelector("#desafio");
+const loading = document.getElementById("loading");
 
-  desafioBtn.addEventListener("click", () => {
-    document
-      .querySelector("#backToProjectsBtn")
-      .addEventListener("click", begin);
-  });
+window.addEventListener("load", function () {
+  // Exibe o loading
+
+  // Adiciona um atraso de 2 segundos antes de chamar a função projetos()
+  setTimeout(function () {
+    projetos(projectsSection);
+    // Esconde o loading após a chamada da função projetos()
+    loading.style.display = "none";
+  }, 6000); // Ajuste o valor do atraso conforme necessário
 });
 
 window.addEventListener("scroll", onScroll);
