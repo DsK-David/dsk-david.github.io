@@ -8,7 +8,7 @@ function projetos(section) {
       <h3>Flash_CLI</h3>
       <div class="img-wrapper">
         <img
-          src="./assets/images/projetos/flash_cli.png"
+          src="./assets/images/projetos/flashcli.png"
           alt="GIF do projeto Flash_cli"
         />
         <div class="buttons">
@@ -50,7 +50,7 @@ function projetos(section) {
           <h3>RoomBuzz</h3>
           <div class="img-wrapper">
             <img
-              src="./assets/images/projetos/roombuzz.gif"
+              src="./assets/images/projetos/roombuzz.png"
               alt="GIF do projeto Orange Evolution."
             />
             <div class="buttons">
@@ -92,7 +92,7 @@ function projetos(section) {
           <h3>INTAPI</h3>
           <div class="img-wrapper">
             <img
-              src="./assets/images/projetos/intapi.gif"
+              src="./assets/images/projetos/intapi.png"
               alt="gif do intapi."
             />
             <div class="buttons">
@@ -120,7 +120,7 @@ function projetos(section) {
         <div class="card">
           <h3>E-VALID</h3>
           <div class="img-wrapper">
-            <img src="./assets/images/projetos/evalid.gif" alt="Imagem do projeto." />
+            <img src="./assets/images/projetos/evalid.png" alt="Imagem do projeto." />
             <div class="buttons">
               <a href="https://github.com/DsK-David/intapi" target="_blank" title="Repositório no Github">
                 <svg
