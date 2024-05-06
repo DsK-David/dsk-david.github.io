@@ -122,7 +122,7 @@ function projetos(section) {
           <div class="img-wrapper">
             <img src="./assets/images/projetos/evalid.png" alt="Imagem do projeto." />
             <div class="buttons">
-              <a href="https://github.com/DsK-David/intapi" target="_blank" title="Repositório no Github">
+              <a href="https://github.com/DsK-David/e-valid" target="_blank" title="Repositório no Github">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   viewBox="0 0 24 24"
