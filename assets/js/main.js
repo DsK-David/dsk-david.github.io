@@ -1,4 +1,3 @@
-
 import { projetos } from "./projetos.js";
 
 const navigation = document.querySelector("#navigation");

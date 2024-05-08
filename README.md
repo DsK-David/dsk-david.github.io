@@ -6,7 +6,7 @@
 
 ## 💻 Sobre
 
-Projeto feito no intuito de me apresentar, como desenvolvedor web front-end.
+Projeto feito no intuito de me apresentar, como desenvolvedor web fullstack.
 
 ## 🤯 O site é composto por:
 
@@ -32,3 +32,6 @@ Neste projeto apliquei os seguintes pontos:
 ## 🏆 Licença
 
 The [MIT License](./LICENSE).
+
+
+
