@@ -13,11 +13,11 @@
   /* --primary-color: hsl(var(--hue), 92%, 43%); */
 
   --primary-color: hsla(182, 100%, 50%, 1);
-  --primary-hover: rgb(66, 40, 104);
+  /* --primary-hover: rgb(66, 40, 104); */
+  --primary-hover: rgb(0, 255, 213);
   --secundary-color: hsl(0, 0%, 5%);
   --third-color: hsla(0, 0%, 100%, 0.1);
   --bg-color: hsl(0, 0%, 8%);
-
   --headline: hsl(0, 0%, 100%);
   --paragraph: hsla(0, 0%, 100%, 0.658);
   --paragraph-2: hsl(calc(var(--hue) + 10), 14%, 97%);
@@ -163,6 +163,7 @@ body.light-mode #home h4 {
   background-color: var(--primary-hover);
   border: 0.2rem solid var(--primary-hover);
   cursor: pointer;
+  font-weight: 600;
 }
 
 body.light-mode .button:hover {
@@ -458,7 +459,6 @@ a.logo {
 nav#navigation a.logo {
   color: var(--primary-color);
 }
-
 body.light-mode nav#navigation a.logo,
 body.light-mode footer a.logo {
   font-weight: bold;
@@ -492,7 +492,7 @@ nav#navigation .menu ul li a {
 nav#navigation .menu ul li a:hover {
   opacity: 0.5;
   transition: 0.1s;
-  font-size: 21px;
+  font-size: 18px;
 }
 
 nav button {

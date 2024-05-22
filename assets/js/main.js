@@ -13,8 +13,11 @@ const vidro = document.querySelector("#vidro");
 const loading = document.getElementById("loading");
 
 window.addEventListener("load", function () {
-  loading.style.display = "none"; // Esconde o loading quando a página é totalmente carregada
-  projetos(projectsSection);
+  setInterval(() => {
+    loading.style.display = "none"; // Esconde o loading quando a página é totalmente carregada
+    projetos(projectsSection);
+  }, 8000);
+  
 });
 
 window.addEventListener("scroll", onScroll);
